@@ -1,0 +1,12 @@
+﻿bin/
+obj/
+.vscode/
+*.user
+*.suo
+*.sln.docstates
+*.DS_Store
+*.lock.json
+logs/
+temp/
+TestResults/
+node_modules/
