@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import useWebSocket, { ReadyState } from 'react-use-websocket';
 
 // Define the WebSocket server URL
-const SOCKET_URL = 'ws:/Localhost:8181';
+const SOCKET_URL = 'ws://localhost:8181';
 
 const App: React.FC = () => {
     // State to store the history of received messages
-    const [messageHistory, setMessageHistory] = useState<string[]>([]);
+    const [messageHistory, setMessageHistory] = useState<{ type: string, content: string }[]>([]);
     // State to store the current input message
     const [inputMessage, setInputMessage] = useState<string>('');
 
@@ -19,8 +19,8 @@ const App: React.FC = () => {
         // Callback when a message is received from the WebSocket server
         onMessage: (message) => {
             if (message.data) {
-                // Add the received message to the message history
-                setMessageHistory((prev) => [...prev, message.data]);
+                // Add the received message to the message history with type 'received'
+                setMessageHistory((prev) => [...prev, { type: 'received', content: message.data }]);
             }
         },
     });
@@ -28,6 +28,8 @@ const App: React.FC = () => {
     // Function to handle sending a message to the WebSocket server
     const handleSendMessage = () => {
         sendMessage(inputMessage);
+        // Add the sent message to the message history with type 'sent'
+        setMessageHistory((prev) => [...prev, { type: 'sent', content: inputMessage }]);
         setInputMessage(''); // Clear the input field after sending the message
     };
 
@@ -55,7 +57,10 @@ const App: React.FC = () => {
             <h2>Message History</h2>
             <ul>
                 {messageHistory.map((message, index) => (
-                    <li key={index}>{message}</li>
+                    <li key={index}>
+                        {message.type === 'sent' ? 'Sent: ' : 'Received: '}
+                        {message.content}
+                    </li>
                 ))}
             </ul>
         </div>
