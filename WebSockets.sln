@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseA", "ExerciseA\ExerciseA.csproj", "{9313466F-BC50-49BB-959F-C8D67717A4EA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseA_FirstWebSocketStateLessWithEcho", "ExerciseA_FirstWebSocketStateLessWithEcho\ExerciseA_FirstWebSocketStateLessWithEcho.csproj", "{9313466F-BC50-49BB-959F-C8D67717A4EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseB", "ExerciseB\ExerciseB.csproj", "{83906324-485E-4254-9E29-122EB4CB71B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseB_WebSocketAPIWithStateAndBroadcasting", "ExerciseB_WebSocketAPIWithStateAndBroadcasting\ExerciseB_WebSocketAPIWithStateAndBroadcasting.csproj", "{83906324-485E-4254-9E29-122EB4CB71B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseA_EventHandling", "ExerciseA_EventHandling\ExerciseA_EventHandling.csproj", "{92E8E304-D650-43CE-9D70-896F8DA971F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +26,9 @@ Global
 		{83906324-485E-4254-9E29-122EB4CB71B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83906324-485E-4254-9E29-122EB4CB71B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83906324-485E-4254-9E29-122EB4CB71B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92E8E304-D650-43CE-9D70-896F8DA971F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92E8E304-D650-43CE-9D70-896F8DA971F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92E8E304-D650-43CE-9D70-896F8DA971F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92E8E304-D650-43CE-9D70-896F8DA971F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
