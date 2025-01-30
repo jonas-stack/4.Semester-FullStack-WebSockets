@@ -10,6 +10,4 @@ server.Start(ws =>
     {
         wsConnection.Add(ws);
     };
-    
-    
 });
